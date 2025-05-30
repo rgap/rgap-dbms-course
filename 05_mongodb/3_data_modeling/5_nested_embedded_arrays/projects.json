@@ -1,0 +1,41 @@
+[
+  {
+    "_id": "project_001",
+    "title": "Website Redesign",
+    "owner": "user_001",
+    "tasks": [
+      {
+        "title": "Wireframe Homepage",
+        "assignedTo": "user_002",
+        "completed": true
+      },
+      {
+        "title": "Update Style Guide",
+        "assignedTo": "user_003",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": "project_002",
+    "title": "Mobile App Launch",
+    "owner": "user_002",
+    "tasks": [
+      {
+        "title": "Implement Login",
+        "assignedTo": "user_001",
+        "completed": true
+      },
+      {
+        "title": "Push Notification Setup",
+        "assignedTo": "user_003",
+        "completed": true
+      },
+      {
+        "title": "App Store Submission",
+        "assignedTo": "user_002",
+        "completed": false
+      }
+    ]
+  }
+]

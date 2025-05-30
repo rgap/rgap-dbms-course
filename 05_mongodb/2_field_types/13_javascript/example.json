@@ -1,0 +1,7 @@
+{
+  "_id": "func_001",
+  "name": "sumFunction",
+  "code": {
+    "$code": "function sum(a, b) { return a + b; }"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "doc_001_v1",
+    "documentId": "doc_001",
+    "version": 1,
+    "title": "Terms and Conditions",
+    "content": "Initial version of the terms.",
+    "timestamp": "2023-01-15T09:00:00Z"
+  },
+  {
+    "_id": "doc_001_v2",
+    "documentId": "doc_001",
+    "version": 2,
+    "title": "Terms and Conditions",
+    "content": "Updated with GDPR compliance.",
+    "timestamp": "2023-05-10T14:30:00Z"
+  },
+  {
+    "_id": "doc_001_v3",
+    "documentId": "doc_001",
+    "version": 3,
+    "title": "Terms and Conditions",
+    "content": "Added clause for international users.",
+    "timestamp": "2024-02-01T10:10:00Z"
+  }
+]

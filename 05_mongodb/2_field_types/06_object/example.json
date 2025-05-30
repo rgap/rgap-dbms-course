@@ -1,0 +1,8 @@
+{
+  "_id": "user_004",
+  "username": "dan_user",
+  "profile": {
+    "firstName": "Dan",
+    "lastName": "Lopez"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "user_002",
+  "username": "bob_builder",
+  "isActive": true,
+  "isAdmin": false
+}

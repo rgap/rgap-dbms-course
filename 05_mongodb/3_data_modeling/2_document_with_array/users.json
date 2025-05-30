@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "user_001",
+    "username": "alice_wonder",
+    "email": "alice@example.com",
+    "skills": ["JavaScript", "React", "MongoDB"]
+  },
+  {
+    "_id": "user_002",
+    "username": "bob_builder",
+    "email": "bob@example.com",
+    "skills": ["Plumbing", "Electrical", "Carpentry"]
+  },
+  {
+    "_id": "user_003",
+    "username": "carol.dev",
+    "email": "carol@example.com",
+    "skills": ["Python", "Django", "Docker", "PostgreSQL"]
+  }
+]

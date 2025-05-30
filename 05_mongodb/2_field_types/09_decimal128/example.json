@@ -1,0 +1,5 @@
+{
+  "_id": "price_001",
+  "product": "Gold Coin",
+  "value": { "$numberDecimal": "12345.6789" }
+}

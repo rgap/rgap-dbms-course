@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "animal_001",
+    "type": "Cat",
+    "name": "Milo",
+    "breed": "Siamese",
+    "meows": true,
+    "indoor": true
+  },
+  {
+    "_id": "animal_002",
+    "type": "Dog",
+    "name": "Rex",
+    "breed": "Labrador",
+    "barks": true,
+    "trained": true
+  },
+  {
+    "_id": "animal_003",
+    "type": "Bird",
+    "name": "Kiwi",
+    "species": "Parrot",
+    "canFly": true,
+    "vocabulary": ["hello", "bye", "cracker"]
+  }
+]

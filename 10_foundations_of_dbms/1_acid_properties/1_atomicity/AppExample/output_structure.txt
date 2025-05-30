@@ -1,0 +1,145 @@
+└── ./
+    └── docker-compose.yml
+    └── init-db/
+        └── init.sql
+    └── server/
+        └── package.json
+        └── .env
+        └── app.js
+        └── prisma/
+            └── schema.prisma
+        └── routes/
+            └── accounts.js
+
+Contents of docker-compose.yml:
+
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    container_name: pg_transfer_example_container
+    restart: always
+    environment:
+      POSTGRES_DB: bankdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init-db:/docker-entrypoint-initdb.d
+
+
+Contents of init-db/init.sql:
+
+-- Create a single 'account' table
+CREATE TABLE IF NOT EXISTS account (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  balance NUMERIC(12, 2) NOT NULL CHECK (balance >= 0)
+);
+
+-- Seed data: Alice and Bob
+INSERT INTO account (name, balance)
+VALUES
+  ('Alice', 1000.00),
+  ('Bob', 500.00)
+ON CONFLICT (name) DO NOTHING;
+
+
+Contents of server/package.json:
+
+{
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.7.0"
+  }
+}
+
+
+Contents of server/.env:
+
+DATABASE_URL="postgresql://admin:secret@localhost:5432/bankdb"
+
+
+Contents of server/app.js:
+
+import cors from "cors";
+import express from "express";
+import accountRoutes from "./routes/accounts.js";
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/accounts", accountRoutes);
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
+
+
+Contents of server/prisma/schema.prisma:
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "./node_modules/@prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Account {
+    id      Int    @id @default(autoincrement())
+    name    String @unique
+    balance Float  @default(0)
+
+    @@map("account")
+}
+
+
+Contents of server/routes/accounts.js:
+
+import { PrismaClient } from "@prisma/client";
+import express from "express";
+
+const prisma = new PrismaClient();
+const router = express.Router();
+
+// ✅ Uppercase "A" matches model name in schema.prisma
+router.get("/", async (_, res) => {
+  const accounts = await prisma.Account.findMany();
+  res.json(accounts);
+});
+
+router.post("/transfer", async (req, res) => {
+  const { from, to, amount } = req.body;
+
+  try {
+    await prisma.$transaction([
+      prisma.Account.update({
+        where: { name: from },
+        data: { balance: { decrement: amount } },
+      }),
+      prisma.Account.update({
+        where: { name: to },
+        data: { balance: { increment: amount } },
+      }),
+    ]);
+
+    res.json({ success: true });
+  } catch (err) {
+    res.status(400).json({ success: false, message: err.message });
+  }
+});
+
+export default router;
+
+

@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "cat_001",
+    "name": "Electronics",
+    "subcategories": [
+      {
+        "name": "Laptops",
+        "subcategories": [
+          { "name": "Ultrabooks", "subcategories": [] },
+          { "name": "Gaming Laptops", "subcategories": [] }
+        ]
+      },
+      {
+        "name": "Smartphones",
+        "subcategories": []
+      }
+    ]
+  }
+]

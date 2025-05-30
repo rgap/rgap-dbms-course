@@ -1,0 +1,10 @@
+{
+  "_id": "file_001",
+  "filename": "contract.pdf",
+  "data": {
+    "$binary": {
+      "base64": "VGhpcyBpcyBhIHRlc3QgZmlsZS4=",
+      "subType": "00"
+    }
+  }
+}

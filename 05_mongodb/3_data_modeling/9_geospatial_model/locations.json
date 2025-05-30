@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "loc_001",
+    "name": "Central Coffee",
+    "type": "cafe",
+    "location": {
+      "type": "Point",
+      "coordinates": [-77.0428, -12.0464]
+    }
+  },
+  {
+    "_id": "loc_002",
+    "name": "Green Park",
+    "type": "park",
+    "location": {
+      "type": "Point",
+      "coordinates": [-77.0341, -12.0455]
+    }
+  },
+  {
+    "_id": "loc_003",
+    "name": "Tech Plaza",
+    "type": "coworking",
+    "location": {
+      "type": "Point",
+      "coordinates": [-77.05, -12.043]
+    }
+  }
+]

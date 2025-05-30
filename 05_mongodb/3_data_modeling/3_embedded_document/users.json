@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "user_001",
+    "username": "alice_wonder",
+    "email": "alice@example.com",
+    "fullName": {
+      "first": "Alice",
+      "last": "Wonderland"
+    },
+    "address": {
+      "street": "123 Main St",
+      "city": "Lima",
+      "district": "Miraflores",
+      "zip": "15074"
+    },
+    "isVerified": true
+  },
+  {
+    "_id": "user_002",
+    "username": "bob_builder",
+    "email": "bob@example.com",
+    "fullName": {
+      "first": "Bob",
+      "last": "Builder"
+    },
+    "address": {
+      "street": "456 Calle del Trabajo",
+      "city": "Cusco",
+      "district": "San Sebastián",
+      "zip": "08002"
+    },
+    "isVerified": false
+  },
+  {
+    "_id": "user_003",
+    "username": "carol.dev",
+    "email": "carol@example.com",
+    "fullName": {
+      "first": "Carol",
+      "last": "Fernandez"
+    },
+    "address": {
+      "street": "789 Avenida Central",
+      "city": "Arequipa",
+      "district": "Yanahuara",
+      "zip": "04017"
+    },
+    "isVerified": true
+  }
+]
