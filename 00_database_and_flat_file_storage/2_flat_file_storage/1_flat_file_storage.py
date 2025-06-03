@@ -1,17 +1,15 @@
 """
-🧠 THEORY: Why We Need DBMS
+🔎 THEORY: Flat File Storage
 
 Before databases, applications used **flat files** like `.txt` or `.csv` to store data.
 This method works for small, simple tasks but fails when data grows or multiple users need access.
 
-Problems with flat files:
-- ❌ No concurrency handling
+A few problems with flat files:
 - ❌ Hard to enforce structure or constraints
 - ❌ Inefficient for querying large datasets
-- ❌ Difficult to handle transactions or recovery
+- ❌ No concurrency handling
 
 This script simulates a primitive file-based data storage system.
-It will help us appreciate what a DBMS solves.
 """
 
 import json

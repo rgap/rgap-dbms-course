@@ -32,7 +32,7 @@ This file provides a detailed comparison between **SQL (Relational Databases)** 
 | ----------- | ------------------------------------ | -------------------------------------------------- |
 | Language    | Structured Query Language (SQL)      | JavaScript-like query syntax (JSON/BSON operators) |
 | Flexibility | Less flexible, more verbose          | Flexible and concise                               |
-| Examples    | `SELECT * FROM users WHERE age > 30` | `db.users.find({ age: { $gt: 30 } })`              |
+| Example     | `SELECT * FROM users WHERE age > 30` | `db.users.find({ age: { $gt: 30 } })`              |
 
 ---
 

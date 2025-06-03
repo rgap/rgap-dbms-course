@@ -8,12 +8,11 @@ It is designed to **model some aspect of the real world**, and its structure all
 
 ## 📚 Key Concepts
 
-| Term            | Definition                                                            |
-| --------------- | --------------------------------------------------------------------- |
-| 🔢 **Data**     | Facts that can be recorded and have meaning.                          |
-| 🗂️ **Database** | A structured collection of data.                                      |
-| 🛠️ **DBMS**     | (Database Management System) Software that manages databases.         |
-| 👤 **Users**    | Individuals or applications that interact with data through the DBMS. |
+| Term            | Definition                                           |
+| --------------- | ---------------------------------------------------- |
+| 🔢 **Data**     | Things that can be recorded and have meaning.        |
+| 🗂️ **Database** | A structured collection of data.                     |
+| 👤 **Users**    | Individuals or applications that interact with data. |
 
 ---
 
@@ -28,9 +27,9 @@ It is designed to **model some aspect of the real world**, and its structure all
 
 ---
 
-## 🔄 CRUD Operations
+## 🔄 Four Common Operations on Data
 
-Modern DBMSs support the following core operations:
+Regardless of the system behind it, most apps use the same basic operations on data. These are called **CRUD** operations:
 
 | Operation     | Description          | Example              |
 | ------------- | -------------------- | -------------------- |
@@ -38,13 +37,3 @@ Modern DBMSs support the following core operations:
 | 🔍 **Read**   | Query existing data  | Retrieve order info  |
 | ✏️ **Update** | Modify existing data | Change product price |
 | ❌ **Delete** | Remove data          | Delete old posts     |
-
----
-
-## ⚙️ Features of Modern DBMSs
-
-Modern systems are designed to support:
-
-- 🔃 **Concurrency**: Handle multiple users simultaneously.
-- 🔐 **Fault Tolerance**: Recover from failures.
-- 🚀 **High Throughput**: Manage large volumes of requests efficiently.

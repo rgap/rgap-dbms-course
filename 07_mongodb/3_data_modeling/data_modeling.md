@@ -59,19 +59,6 @@ Example:
 
 ---
 
-## ⚖️ When to Use Embedded vs Referenced
-
-See `modeling_criteria.md` for a deeper discussion, but here’s a quick overview:
-
-| Characteristic      | Embedded                    | Referenced                     |
-| ------------------- | --------------------------- | ------------------------------ |
-| Data size           | Small                       | Potentially large or unbounded |
-| Update frequency    | Frequently updated together | Updated separately             |
-| Read access pattern | Always read together        | Accessed independently         |
-| Duplication of data | Acceptable                  | Should be minimized            |
-
----
-
 ## 🧱 Additional Design Considerations
 
 - MongoDB limits document size to **16MB**.
